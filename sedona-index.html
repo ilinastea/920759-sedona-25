@@ -17,7 +17,7 @@
       </nav>
     </header>
     <main>
-      <h1>Седона</h1><!--сделать скрытым-->
+      <h1 class="visually-hidden">Седона</h1>
       <section class="welcome-banner">
         <a><img src="img/welcome-background.jpg" width="1200" height="800"></a>
         <a><img src="img/intro-mask.svg" width="1201" height="59"></a><!--оформление "полигон"-->
@@ -30,6 +30,30 @@
       <section class="hotel-search-criteria">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      </section>
+      <section class="hotel-search-form">
+        <h3>Поиск гостиницы в Седоне</h3>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <div class="search-dates">
+            <p>
+              <label>Дата заезда:<input type="date" name="date-in" value="2017-04-24"></label>
+            </p>
+            <p>
+            <label>Дата выезда:<input type="date" name="date-out" value="2017-07-04"></label>
+            </p>
+          </div>
+          <div class="search-travelers-number">
+            <p>
+              <label>Взрослые:<input type="number" name="adults" value="2"></label>
+            </p>
+            <p>
+              <label>Дети:<input type="number" name="children" value="0"></label>
+            </p>
+          </div>
+          <div class="search-button">
+            <button type="submit">Найти</button>
+          </div>
+        </form>
       </section>
     </main>
     <footer>
