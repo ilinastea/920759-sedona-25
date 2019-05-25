@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
 
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 14px;
@@ -10,66 +11,180 @@ body {
 
 a {
   text-decoration: none;
+  color: #000000;
+}
+/*_____________вспомогательные outline*/
+.sedona-navigation, .welcome__mask, .welcome__text,
+.sedona-title, .sedona-intro, .choice-reason__content, .trip-advice,
+ .hotel-search-form, .hashtag-visitsedona, .link-htmlacademy,
+.hotel-filters, .filter__items, .hotel-sorting,
+ .hotel-item {
+  outline: 1px solid blue;
+}
+
+.sedona-header, main, .sedona-footer {
+  outline: 2px solid black;
+}
+/*_____________вспомогательные outline*/
+
+/*_____________исправление бага с отсутпом*/
+.welcome__background img, .welcome__mask img, .welcome__text img,
+.choice-reason__photo img, .hotel-item__photo img {
+  vertical-align: middle;
+}
+
+.hidden {
+  display: none;
+}
+
+/*__________списки*/
+.main-menu, .social-links, .filter__items,
+.hotel-sorting__types, .hotel-item__rating-stars {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hotel-search-form fieldset,
+.hotel-filters fieldset {
+  border: none;
+}
+
+.main-layout {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.sedona-navigation {
+position: relative;
+}
+
+.sedona-logo {
+  position: absolute;
+  /* left: 600px; */
+  left: 530px;
 }
 
 .main-menu {
   font-weight: 700;
+
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+
+  outline: 1px solid red;
 }
 
-.choice-reasons h2 {
+.sedona-title {
   font-size: 21px;
   font-weight: 700;
+
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-.choice-reasons p {
+.sedona-intro {
   font-weight: 400;
+
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-.choice-reason_text h3 {
+.choice-reason {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.choice-reason__name {
   font-size: 21px;
   font-weight: 700;
   line-height: 21px;
+
+  margin: 0;
+  padding: 0;
 }
 
-.choice-reason_text p {
+.choice-reason__number, .choice-reason__text {
   font-weight: 400;
   line-height: 21px;
+
+  margin: 0;
+  padding: 0;
 }
 
-.trip-advices_advice h4 {
+.trip-advices {
+  display: flex;
+}
+
+.trip-advice__name {
   font-size: 21px;
   font-weight: 700;
   line-height: 21px;
+
+  margin: 0;
+  padding: 0;
 }
 
-.trip-advices_advice p {
+.trip-advice__text {
   font-weight: 400;
   line-height: 21px;
+
+  margin: 0;
+  padding: 0;
 }
 
 .hotel-search-suggestion h2 {
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
+
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .hotel-search-suggestion p {
   font-weight: 400;
   line-height: 24px;
+
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 /*_____Форма поиска*/
 
-.hotel-search h3 {
+.hotel-search-title {
   font-size: 21px;
   font-weight: 700;
   color: #ffffff;
 
   background-color: #766357;
+
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 576px;
+  text-align: center;
 }
 
 .hotel-search-form {
   font: inherit;
+
+  width: 576px;
+}
+
+.hotel-search-form__dates, .hotel-search-form__numbers {
+  margin: 0;
+  padding: 0;
 }
 
 .hotel-search-form label {
@@ -80,7 +195,7 @@ a {
   font-weight: 700;
 }
 
-.hotel-search-form_button {
+.hotel-search-form__button {
   font: inherit;
   font-size: 21px;
   font-weight: 700;
@@ -95,25 +210,28 @@ a {
 
 .hotel-filters {
   font: inherit;
+
+  display: flex;
 }
 
-.hotel-filters legend {
+.filter__name {
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
+
+  margin: 0;
+  padding: 0;
 }
 
-.hotel-filters label {
+.filter__item {
   font-weight: 400;
   line-height: 21px;
+
+  margin: 0;
+  padding: 0;
 }
 
-.hotel-filters input {
-  font-weight: 400;
-  line-height: 21px;
-}
-
-.hotel-filters_show-button {
+.filters-show-button {
   font: inherit;
   font-weight: 400;
   line-height: 21px;
@@ -121,18 +239,33 @@ a {
 }
 
 /*_____Строка сортировки*/
-.hotel-sorting h3 {
-  font-size: 21px;
-  font-weight: 700;
+
+.hotel-sorting {
+  display: flex;
 }
 
-.hotel-sorting h4 {
+.hotel-sorting__numb-of-found {
+  font-size: 21px;
+  font-weight: 700;
+
+  margin: 0;
+  padding: 0;
+}
+
+.hotel-sorting__title {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
+
+  margin: 0;
+  padding: 0;
 }
 
-.hotel-sorting li {
+.hotel-sorting__types {
+  display: flex;
+}
+
+.hotel-sorting__type {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -140,37 +273,72 @@ a {
 
 /*_____Список гостиниц*/
 
-.hotel-item_main-info h2 {
-  font-size: 21px;
-  font-weight: 700;
+.hotel-item {
+  display: flex;
 }
 
-.hotel-item_main-info p {
+.hotel-item__main-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel-item__name {
+  font-size: 21px;
+  font-weight: 700;
+
+  margin: 0;
+  padding: 0;
+}
+
+.hotel-item__type, .hotel-item__price {
   font-weight: 400;
   line-height: 21px;
+
+  margin: 0;
+  padding: 0;
 }
 
 .hotel-item_details {
   font-weight: 700;
   line-height: 21px;
+
+  margin: 0;
+  padding: 0;
 }
 
 .hotel-item_book {
   font-weight: 700;
   line-height: 21px;
+
+  margin: 0;
+  padding: 0;
 }
 
-.hotel-item_rating p {
+.hotel-item__rating {
+  align-self: flex-end;
+}
+
+.hotel-item__rating-text {
   font-weight: 400;
   line-height: 21px;
   color: #666666;
+
+  margin: 0;
+  padding: 0;
 }
 
 /*_____Стили для футера*/
 
+.sedona-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .hashtag-visitsedona {
   font-size: 21px;
   font-weight: 700;
+
+  display: block;
 }
 
 .link-htmlacademy {
