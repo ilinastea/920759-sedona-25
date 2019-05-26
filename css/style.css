@@ -1,10 +1,14 @@
 /*temporary outlines*/
 .sedona-navigation, .welcome__mask, .welcome__text,
 .sedona-title, .sedona-intro, .choice-reason__content, .trip-advice,
- .hotel-search-form, .hashtag-visitsedona, .link-htmlacademy,
+.hotel-search-form, .hashtag-visitsedona, .link-htmlacademy,
 .hotel-filters, .filter__items, .hotel-sorting,
- .hotel-item {
+.hotel-item__type, .hotel-item__price, .hotel-item__rating  {
   outline: 1px solid blue;
+}
+
+.hotel-item {
+  outline: 1px solid red;
 }
 
 .sedona-header, main, .sedona-footer {
@@ -302,9 +306,13 @@ position: relative;
   display: flex;
 }
 
-.hotel-item__main-info {
+.hotel-item__main {
   display: flex;
   flex-direction: column;
+}
+
+.hotel-item__info, .hotel-item__action {
+  display: flex;
 }
 
 .hotel-item__name {
