@@ -45,7 +45,7 @@ a {
 
 /*bug with paddings*/
 .welcome__background img, .welcome__mask img, .welcome__text img,
-.choice-reason__photo img, .hotel-item__photo img {
+.choice-reason__photo img, .hotel-item__photo img, .map__picture img {
   vertical-align: middle;
 }
 
@@ -84,20 +84,20 @@ position: relative;
 
 
 /*_____Welcome to Sedona_____*/
-/* .welcome__background {
+.welcome__background {
   position: relative;
 }
 
 .welcome__mask {
   position: absolute;
-  top: 770px;
+  top: 509px;
 }
 
 .welcome__text {
   position: absolute;
   top: 77px;
-  left: 371px;
-} */
+  left: 450px;
+}
 /*_____Welcome to Sedona_____*/
 
 
@@ -376,12 +376,17 @@ position: relative;
 
 .hashtag-visitsedona {
   display: block;
+  margin: 0;
+  padding: 0;
 
   font-size: 21px;
   font-weight: 700;
 }
 
 .link-htmlacademy {
+  margin: 0;
+  padding: 0;
+
   font-weight: 400;
 }
 /*_____Footer_____*/
