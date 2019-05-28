@@ -1,14 +1,15 @@
 /*temporary outlines*/
 .sedona-navigation, .welcome__mask, .welcome__text,
 .sedona-title, .sedona-intro, .choice-reason__content, .trip-advice,
-.hotel-search-form, .hashtag-visitsedona, .link-htmlacademy,
+.hotel-search-form, .hotel-search-form__dates, .hotel-search-form__numbers,
+.hashtag-visitsedona, .link-htmlacademy,
 .hotel-filters, .filter__item, .filter-price-btn, .hotel-sorting,
 .hotel-item__action, .hotel-item__info, .hotel-item__rating,
 .filters-show-button {
   outline: 1px solid blue;
 }
 
-.hotel-item, .filter {
+.hotel-search-form__numbers label, .hotel-item, .filter {
   outline: 1px solid red;
 }
 
@@ -103,7 +104,6 @@ position: relative;
 
 /*_____Why choose Sedona_____*/
 .sedona-title {
-  display: block;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -113,7 +113,6 @@ position: relative;
 }
 
 .sedona-intro {
-  display: block;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -169,7 +168,6 @@ position: relative;
 
 /*_____Hotels search form_____*/
 .hotel-search-suggestion h2 {
-  display: block;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -180,7 +178,6 @@ position: relative;
 }
 
 .hotel-search-suggestion p {
-  display: block;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -190,7 +187,6 @@ position: relative;
 }
 
 .hotel-search-title {
-  display: block;
   margin: 0;
   padding: 0;
   width: 576px;
@@ -212,6 +208,7 @@ position: relative;
 .hotel-search-form__dates, .hotel-search-form__numbers {
   margin: 0;
   padding: 0;
+  border: 0;
 }
 
 .hotel-search-form label {
@@ -375,7 +372,6 @@ position: relative;
 }
 
 .hashtag-visitsedona {
-  display: block;
   margin: 0;
   padding: 0;
 
