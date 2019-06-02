@@ -31,13 +31,16 @@
           <legend class="filter__name">Инфраструктура:</legend>
           <ul class="filter-list">
             <li class="filter-list__item">
-              <label><input type="checkbox" name="pool" checked>Бассейн</label>
+              <input type="checkbox" name="pool" id="filter-pool" checked>
+              <label for="filter-pool">Бассейн</label>
             </li>
             <li class="filter-list__item">
-              <label><input type="checkbox" name="parking">Парковка</label>
+              <input type="checkbox" name="parking" id="filter-parking">
+              <label for="filter-parking">Парковка</label>
             </li>
             <li class="filter-list__item">
-              <label><input type="checkbox" name="wi-fi">Wi-Fi</label>
+              <input type="checkbox" name="wifi" id="filter-wifi">
+              <label for="filter-wifi">Wi-Fi</label>
             </li>
           </ul>
         </fieldset>
@@ -45,33 +48,45 @@
           <legend class="filter__name">Тип жилья:</legend>
           <ul class="filter-list">
             <li class="filter-list__item">
-              <label><input type="checkbox" name="hotel" checked>Гостиница</label>
+              <input type="checkbox" name="hotel" id="filter-hotel" checked>
+              <label for="filter-hotel">Гостиница</label>
             </li>
             <li class="filter-list__item">
-              <label><input type="checkbox" name="motel" checked>Мотель</label>
+              <input type="checkbox" name="motel" id="filter-motel" checked>
+              <label for="filter-motel">Мотель</label>
             </li>
             <li class="filter-list__item">
-              <label><input type="checkbox" name="apartments" checked>Апартаменты</label>
+              <input type="checkbox" name="apartments" id="filter-aparts" checked>
+              <label for="filter-aparts">Апартаменты</label>
             </li>
           </ul>
         </fieldset>
+
+        <!--_____Filter "Price" with scale and show button_____-->
         <div class="filter-price-btn">
-          <fieldset class="filter">
-            <legend class="filter__name">Стоимость в сутки (р):</legend>
-            <div class="filter__item">
-              <label>От <input type="number" value="0"></label>
-              <label>До <input type="number" value="3000"></label>
+          <fieldset class="filter-price">
+            <legend class="filter-price__name">Стоимость в сутки (р):</legend>
+            <div class="price-controls">
+              <label class="min-price">От <input type="text" name="min-price" value="0"></label>
+              <label class="max-price">До <input type="text" name="max-price" value="3000"></label>
             </div>
-              <!--div для изображения шкалы, стилизация в css-->
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+            </div>
           </fieldset>
           <button class="filters-show-button" type="submit">Показать</button>
         </div>
+        <!--_____Filter "Price" with scale and show button_____-->
       </form>
       <!--_____Hotels search filters_____-->
 
       <!--_____Hotels search sorting_____-->
       <section class="hotel-sorting">
-        <h3 class="hotel-sorting__numb-of-found">Найдено: 3</h3>
+        <h3 class="hotel-sorting__total-amount">Найдено: 3</h3>
         <h4 class="hotel-sorting__title">Сортировка:</h4>
         <ul class="hotel-sorting__types">
           <li class="hotel-sorting__type"><a href="#">По цене</a></li>
@@ -164,11 +179,26 @@
     <footer class="sedona-footer main-layout">
       <p class="hashtag-visitsedona">#Visitsedona</p>
       <ul class="social-links">
-        <li class="social-links__twitter"><a href="#" target="_blank"></a></li>
-        <li class="social-links__facebook"><a href="#" target="_blank"></a></li>
-        <li class="social-links__youtube"><a href="#" target="_blank"></a></li>
+        <li>
+          <a class="social-links__item" href="#" target="_blank">
+            <img src="img/twitter.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a class="social-links__item" href="#" target="_blank">
+            <img src="img/fb.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a class="social-links__item" href="#" target="_blank">
+            <img src="img/youtube.svg" alt="">
+          </a>
+        </li>
       </ul>
-      <p class="link-htmlacademy">Website by <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy"></a></p>
+      <div class="link-htmlacademy">
+        <p>Website by</p>
+        <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy"></a>
+      </div>
     </footer>
   </body>
 </html>
