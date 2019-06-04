@@ -1,5 +1,5 @@
 /*temporary outlines*/
-/* .sedona-navigation, .welcome__white-block, .welcome__mask, .welcome__text,
+.sedona-navigation, .welcome__white-block, .welcome__mask, .welcome__text,
 .welcome__title, .welcome__intro, .choice-reason__content, .trip-advice,
 .hotel-search-form, .hotel-search-form__dates, .hotel-search-form__numbers,
 .hashtag-visitsedona, .link-htmlacademy, .filter-list__item,
@@ -9,15 +9,13 @@
   outline: 1px solid blue;
 }
 
-.hotel-search-form__numbers label, .hotel-item, .filter,
+.hotel-search-form__numbers label, .hotel-search-form__numbers input,
+.hotel-search-form__dates label, .hotel-search-form__dates input
+.hotel-item, .filter,
 .filter-list__item label,
 .hotel-item_details, .hotel-item_book {
   outline: 1px solid red;
 }
-
-.sedona-header, main, .sedona-footer {
-  outline: 2px solid black;
-} */
 /*temporary outlines*/
 
 body {
@@ -128,12 +126,13 @@ a {
 .welcome__white-block::before {
   content: "";
   position: absolute;
-  top: -57px;
+  top: -56px;
   width: 1201px;
   height: 59px;
   background-image: url(../img/welcome-mask.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
+  outline: 1px solid red;
 }
 
 .welcome__title {
@@ -254,10 +253,15 @@ a {
 
 
 /*_____Hotels search form_____*/
+.hotel-search-suggestion {
+  margin: 0;
+  padding: 0;
+  padding-top: 52px
+}
+
 .hotel-search-suggestion h2 {
   margin: 0;
-  margin-top: 50px;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   padding: 0;
   text-align: center;
 
@@ -269,7 +273,7 @@ a {
 .hotel-search-suggestion p {
   max-width: 420px;
   margin: 0 auto;
-  margin-bottom: 44px;
+  margin-bottom: 46px;
   padding: 0;
   text-align: center;
 
@@ -278,7 +282,7 @@ a {
 }
 
 .hotel-search-title {
-  width: 572px;
+  width: 570px;
   margin: 0 auto;
   padding: 0;
   padding-top: 30px;
@@ -341,7 +345,7 @@ a {
 
 .hotel-search-form__button {
   display: block;
-  width: 460px;
+  /* width: 460px; */
   margin: 0;
   padding: 18px 196px;
 
@@ -537,8 +541,8 @@ a {
 
 .filters-show-button {
   display: block;
-  margin: 0;
-  margin-left: 85px;
+  margin: 0 auto;
+  /* margin-left: 85px; */
   margin-bottom: 33px;
   padding: 5px 34px;
 
@@ -603,18 +607,21 @@ a {
 
 /*_____Hotels list_____*/
 .hotel-search-result {
-  margin-left: 73px;
-  margin-right: 73px;
+  border-top: 1px solid #e5e5e5;
 }
 
 .hotel-item {
   display: flex;
+  padding-left: 73px;
+  padding-right: 73px;
+
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .hotel-item__photo {
-  margin-top: 30px;
+  margin-top: 29px;
   margin-right: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .hotel-item__main {
@@ -622,12 +629,12 @@ a {
   flex-direction: column;
   align-items: flex-start;
   margin-top: 29px;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .hotel-item__name {
   margin: 0;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
   padding: 0;
 
   font-size: 21px;
@@ -636,7 +643,7 @@ a {
 
 .hotel-item__info {
   display: flex;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .hotel-item__type, .hotel-item__price {
@@ -679,8 +686,8 @@ a {
 .hotel-item__rating {
   display: block;
   align-self: flex-end;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 0;
+  margin-bottom: 29px;
   margin-left: auto;
   padding: 2px 13px;
   text-align: center;
