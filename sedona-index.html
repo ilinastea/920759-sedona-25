@@ -100,20 +100,28 @@
         <div class="hotel-search">
           <h3 class="hotel-search-title">Поиск гостиницы в Седоне</h3>
           <form class="hotel-search-form" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="hotel-search-form__dates">
-              <label>Дата заезда:<input type="date" name="date-in" value="2017-04-24"></label>
-              <label>Дата выезда:<input type="date" name="date-out" value="2017-07-04"></label>
-            </fieldset>
-            <fieldset class="hotel-search-form__numbers">
+            <div class="hotel-search-form__date-in">
+              <label for="in">Дата заезда:</label>
+              <input type="text" name="date-in" id="in" value="24 апреля 2017">
+            </div>
+            <div class="hotel-search-form__date-out">
+              <label for="out">Дата выезда:</label>
+              <input type="text" name="date-out" id="out" value="4 июля 2017">
+            </div>
+            <div class="hotel-search-form__numbers">
               <label for="adults">Взрослые:</label>
-              <button type="button">-</button>
-              <input type="number" name="numb-of-adults" id="adults" value="2">
-              <button type="button">+</button>
+              <div class="block">
+                <button type="button"></button>
+                <input type="text" name="numb-of-adults" id="adults" value="2">
+                <button type="button"></button>
+              </div>
               <label for="children">Дети:</label>
-              <button type="button">-</button>
-              <input type="number" name="numb-of-children" id="children" value="0">
-              <button type="button">+</button>
-            </fieldset>
+              <div class="block">
+                <button type="button"></button>
+                <input type="text" name="numb-of-children" id="children" value="0">
+                <button type="button"></button>
+              </div>
+            </div>
             <button class="hotel-search-form__button" type="submit">Найти</button>
           </form>
         </div>
