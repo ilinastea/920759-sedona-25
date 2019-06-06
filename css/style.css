@@ -1,5 +1,5 @@
 /*temporary outlines*/
-.sedona-navigation, .welcome__white-block, .welcome__mask, .welcome__text,
+/* .sedona-navigation, .welcome__white-block, .welcome__mask, .welcome__text,
 .welcome__title, .welcome__intro, .choice-reason__content, .trip-advice,
 .hotel-search-form,
 .hashtag-visitsedona, .link-htmlacademy, .filter-list__item,
@@ -13,11 +13,12 @@
 .hotel-search-form__date-in label, .hotel-search-form__date-in input,
 .hotel-search-form__date-out label, .hotel-search-form__date-out input,
 .hotel-search-form button,
-.hotel-item, .filter,
-.filter-list__item label,
+.hotel-item__name, .hotel-item__info,
+.filter,
+.filter-list__item label, .hotel-sorting__arrows,
 .hotel-item_details, .hotel-item_book {
   outline: 1px dashed red;
-}
+} */
 /*temporary outlines*/
 
 body {
@@ -405,13 +406,40 @@ a {
 }
 
 .hotel-search-form__numbers button {
+  position: relative;
+
   width: 38px;
   height: 38px;
   margin: 0;
   padding: 0;
 
+  font: inherit;
+  font-weight: 700;
+  color: #a9a9a9;
+  text-transform: uppercase;
+
   background-color: #f2f2f2;
 }
+
+/* .hotel-search-form__numbers button::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 14px;
+  width: 12px;
+  height: 3px;
+  background-color: #a9a9a9;
+}
+
+.hotel-search-form__numbers button::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 19px;
+  width: 3px;
+  height: 11px;
+  background-color: #a9a9a9;
+} */
 
 .hotel-search-form__button {
   display: block;
@@ -492,6 +520,8 @@ a {
   height: 23px;
 
   background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .filter-list__item input[type="checkbox"] + label::before {
@@ -503,6 +533,8 @@ a {
   height: 23px;
 
   background-image: url(../img/checkbox-off.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 /*_____Filter "Price" with scale and show button_____*/
@@ -633,6 +665,8 @@ a {
 
 /*_____Hotels search sorting_____*/
 .hotel-sorting {
+  position: relative;
+
   display: flex;
   margin-left: 73px;
   margin-right: 73px;
@@ -655,7 +689,6 @@ a {
   margin-right: 40px;
   padding: 0;
 
-
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -671,6 +704,34 @@ a {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
+}
+
+.hotel-sorting::before {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 10px;
+  top: 40px;
+  right: 23px;
+
+  background-image: url(../img/icon-up-dir.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
+.hotel-sorting::after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 10px;
+  top: 40px;
+  right: 0px;
+
+  background-image: url(../img/icon-down-dir.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
 }
 /*_____Hotels search sorting_____*/
 
@@ -759,20 +820,39 @@ a {
   margin: 0;
   margin-bottom: 29px;
   margin-left: auto;
-  padding: 2px 13px;
-  text-align: center;
-
-  background-color: #f2f2f2;
 }
 
 .hotel-item__rating-text {
   margin: 0;
   padding: 0;
+  padding: 2px 13px;
 
   font-weight: 400;
   line-height: 21px;
   color: #666666;
+
+  background-color: #f2f2f2;
 }
+
+.hotel-item__rating-stars {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.hotel-item__rating-star {
+  width: 18px;
+  height: 17px;
+  margin-bottom: 48px;
+
+  background-image: url(../img/star.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.hotel-item__rating-stars li:not(:last-child) {
+  margin-left: 6px;
+}
+
 /*_____Hotels list_____*/
 
 
