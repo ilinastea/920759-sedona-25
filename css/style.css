@@ -49,27 +49,40 @@ a {
   padding: 0 40px;
 }
 
-.welcome__background img, .welcome__text img,
+/* .welcome__background img, .welcome__text img,
 .choice-reason__photo img, .trip-advice__icon img,
 .hotel-item__photo img, .map__picture img,
-.link-htmlacademy img {
+.link-htmlacademy img  */
+
+img {
   display: block;
 }
 
 /*lists*/
-.main-menu, .social-links, .filter-list,
+/* .main-menu, .social-links, .filter-list,
 .hotel-sorting__types, .hotel-item__rating-stars,
-.hotel-sorting__sorting {
+.hotel-sorting__sorting */
+
+ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.hotel-search-form input, .hotel-search-form fieldset,
+/* .hotel-search-form input, .hotel-search-form fieldset,
 .hotel-search-form button, .hotel-filters fieldset,
-.hotel-filters input {
+.hotel-filters input  */
+
+input, button, fieldset {
+  margin: 0;
+  padding: 0;
   border: 0;
   outline: none;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
 }
 
 /*_____Menu_____*/
@@ -86,13 +99,11 @@ a {
 
 .main-menu {
   display: flex;
-
   font-weight: 700;
 }
 
 .main-menu__item {
   width: 239px;
-  margin: 0;
   padding: 15px 0;
   text-align: center;
 }
@@ -144,15 +155,12 @@ a {
 .welcome__title {
   width: 445px;
   margin: 0 auto 28px;
-  padding: 0;
   text-align: center;
   font-size: 21px;
   font-weight: 700;
 }
 
 .welcome__intro {
-  margin: 0;
-  padding: 0;
   text-align: center;
   font-weight: 400;
 }
@@ -168,6 +176,7 @@ a {
 .choice-reason__content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 400px;
   background-color: #eeeeee;
 }
@@ -180,7 +189,6 @@ a {
 .choice-reason__name {
   max-width: 152px;
   margin: 47px auto 24px;
-  padding: 0;
   text-align: center;
   font-size: 21px;
   font-weight: 700;
@@ -189,7 +197,6 @@ a {
 
 .choice-reason__number {
   margin: 0 auto 21px;
-  padding: 0;
   text-align: center;
   font-weight: 400;
   line-height: 21px;
@@ -198,7 +205,6 @@ a {
 .choice-reason__text {
   max-width: 280px;
   margin: 0 auto 58px;
-  padding: 0;
   text-align: center;
   font-weight: 400;
   line-height: 21px;
@@ -214,12 +220,10 @@ a {
 
 .trip-advice__icon img {
   margin: 60px auto 30px;
-  padding: 0;
 }
 
 .trip-advice__name {
   margin: 0 auto 24px;
-  padding: 0;
   text-align: center;
   font-size: 21px;
   font-weight: 700;
@@ -229,7 +233,6 @@ a {
 .trip-advice__text {
   max-width: 280px;
   margin: 0 auto 74px;
-  padding: 0;
   text-align: center;
   font-weight: 400;
   line-height: 21px;
@@ -240,13 +243,11 @@ a {
 /*_____Hotels search form_____*/
 .hotel-search-suggestion {
   position: relative;
-  margin: 0;
-  padding: 52px 0 0;
+  padding-top: 52px;
 }
 
 .hotel-search-suggestion h2 {
-  margin: 0 0 22px;
-  padding: 0;
+  margin-bottom: 24px;
   text-align: center;
   font-size: 30px;
   font-weight: 700;
@@ -256,14 +257,13 @@ a {
 .hotel-search-suggestion p {
   max-width: 420px;
   margin: 0 auto 48px;
-  padding: 0;
   text-align: center;
   font-weight: 400;
   line-height: 24px;
 }
 
 .hotel-search-title {
-  width: 565px;
+  width: 568px;
   margin: 0 auto;
   padding: 30px 0 30px;
   text-align: center;
@@ -281,15 +281,12 @@ a {
   flex-direction: column;
   width: 458px;
   margin-left: -284px;
-  padding: 55px 54px;
+  padding: 54px 55px;
   font: inherit;
   background-color: #ffffff;
 }
 
-.hotel-search-form label {
-  font-weight: 700;
-}
-
+.hotel-search-form label,
 .hotel-search-form input {
   font-weight: 700;
 }
@@ -298,53 +295,43 @@ a {
 .hotel-search-form__date-out {
   position: relative;
   display: flex;
-  margin: 0 0 30px;
-  padding: 0;
+  margin-bottom: 30px;
+  align-items: center;
 }
 
-.hotel-search-form__date-in label,
-.hotel-search-form__date-out label {
-  margin: 0;
-  padding: 6px 0 6px;
+.hotel-search-form__calendar  {
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.hotel-search-form__calendar svg {
+  position: absolute;
+  right: 8px;
+  opacity: 0.5;
+}
+
+.hotel-search-form__calendar svg:hover {
+  opacity: 1;
+}
+
+.hotel-search-form__calendar svg:active path {
+  fill: #81b3d2;
 }
 
 .hotel-search-form__date-in input,
 .hotel-search-form__date-out input {
   width: 334px;
-  margin: 0 0 0 auto;
   padding: 6px 0 6px 12px;
   font: inherit;
   font-weight: 700;
   text-transform: uppercase;
   background-color: #f2f2f2;
 }
-
-/* .hotel-search-form__date-in button,
-.hotel-search-form__date-out button {
-  position: relative;
-  display: block;
-  width: 37px;
-  margin: 0;
-  padding: 0;
-  background-color: #f2f2f2;
-} */
-
-.hotel-search-form__date-in::before,
-.hotel-search-form__date-out::before {
-  content: "";
-  position: absolute;
-  width: 21px;
-  height: 22px;
-  top: 8px;
-  right: 8px;
-  background: url(../img/calendar.svg) no-repeat;
-  opacity: 0.4;
-  cursor: pointer;
-}
-
-.hotel-search-form__date-in:hover::before,
-.hotel-search-form__date-out:hover::before {
-  opacity: 1;
+/* for IE*/
+.hotel-search-form input::-ms-clear {
+  display: none;
 }
 
 .hotel-search-form__number {
@@ -352,26 +339,16 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 458px;
-  margin: 0 0 56px;
-  padding: 0;
+  margin-bottom: 56px;
 }
 
 .hotel-search-form__number-block {
   display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.hotel-search-form__number label {
-  margin: 0;
-  padding: 0;
 }
 
 .hotel-search-form__number input {
   width: 38px;
   height: 38px;
-  margin: 0;
-  padding: 0;
   text-align: center;
   font: inherit;
   font-weight: 700;
@@ -382,8 +359,6 @@ a {
   position: relative;
   width: 38px;
   height: 38px;
-  margin: 0;
-  padding: 0;
   font: inherit;
   font-weight: 700;
   color: #a9a9a9;
@@ -424,7 +399,6 @@ a {
 
 .hotel-search-form__action {
   display: block;
-  margin: 0;
   padding: 15px 0;
   text-align: center;
   font: inherit;
@@ -442,8 +416,8 @@ a {
   background-color: #ebebeb;
 }
 
-.hotel-search-form__date-in input:focus,
-.hotel-search-form__date-out input:focus {
+.hotel-search-form__date-in input:focus:not(.label),
+.hotel-search-form__date-out input:focus:not(.label) {
   outline: 2px solid #e5e5e5;
   background-color: #ffffff;
 }
@@ -462,22 +436,18 @@ a {
 
 .filter {
   width: 255px;
-  margin: 0;
-  padding: 0;
 }
 
 .filter__name {
-  margin: 0;
-  padding: 0 0 28px;
+  padding-bottom: 28px;
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
 }
 
 .filter-list__item {
-  margin: 0;
   margin-bottom: 24px;
-  padding: 0 0 0 40px;
+  padding-left: 40px;
   font-weight: 400;
   line-height: 21px;
 }
@@ -521,15 +491,8 @@ a {
   margin-left: auto;
 }
 
-.filter-price {
-  margin: 0;
-  padding: 0;
-}
-
 .filter-price__name {
-  margin: 0 0 12px;
-  padding: 0;
-
+  margin-bottom: 12px;
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
@@ -568,7 +531,6 @@ a {
 
 .price-controls input {
   width: 50px;
-  margin: 0;
   color: inherit;
   font: inherit;
   background: none;
@@ -650,15 +612,13 @@ a {
 }
 
 .hotel-sorting__total-amount {
-  margin: 0 48px 0 0;
-  padding: 0;
+  margin-right: 48px;
   font-size: 21px;
   font-weight: 700;
 }
 
 .hotel-sorting__title {
-  margin: 0 40px 0 0;
-  padding: 0;
+  margin-right: 40px;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -697,8 +657,7 @@ a {
 
 .hotel-sorting__sorting {
   display: flex;
-  margin: 0 0 0 auto;
-  padding: 0;
+  margin-left: auto;
 }
 
 .hotel-sorting__sorting path {
@@ -737,7 +696,6 @@ a {
 }
 
 .hotel-search-result__alignment {
-  margin: 0;
   padding: 30px 73px;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -750,12 +708,10 @@ a {
 .hotel-item__main {
   display: flex;
   flex-direction: column;
-  margin: 0;
 }
 
 .hotel-item__name {
   margin: -4px 0 5px 0; /*в макете выравнивание с фото по верхн.линии букв*/
-  padding: 0;
   font-size: 21px;
   font-weight: 700;
 }
@@ -777,8 +733,6 @@ a {
 .hotel-item__type, .hotel-item__price {
   display: block;
   width: 110px;
-  margin: 0;
-  padding: 0;
   font-weight: 400;
   line-height: 21px;
 }
@@ -794,7 +748,6 @@ a {
 
 .hotel-item__book, .hotel-item__details {
   display: block;
-  margin: 0;
   padding: 3px 16px;
   font-weight: 700;
   line-height: 21px;
@@ -813,11 +766,11 @@ a {
 .hotel-item__rating {
   display: flex;
   flex-direction: column;
-  margin: 0 0 0 auto;
+  margin-left: auto;
 }
 
 .hotel-item__rating-text {
-  margin: auto 0 0 0;
+  margin-top: auto;
   padding: 2px 13px;
   font-weight: 400;
   line-height: 21px;
@@ -833,7 +786,6 @@ a {
 .hotel-item__rating-star {
   width: 18px;
   height: 17px;
-  margin: 0;
   background: url(../img/star.svg) no-repeat;
 }
 
@@ -852,7 +804,6 @@ a {
 
 .hashtag-visitsedona {
   margin: 0 258px 0 132px;
-  padding: 0;
   font-size: 21px;
   font-weight: 700;
 }
@@ -880,7 +831,6 @@ a {
   display: flex;
   align-items: center;
   margin: 0 98px 0 0;
-  padding: 0;
 }
 
 .link-htmlacademy svg {
@@ -897,8 +847,7 @@ a {
 }
 
 .link-htmlacademy p {
-  margin: 0 7px 0 0;
-  padding: 0;
+  margin-right: 7px;
   font-weight: 400;
 }
 /*_____Footer_____*/
