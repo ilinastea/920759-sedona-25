@@ -2,6 +2,8 @@
   var popup = document.querySelector(".hotel-search");
   var dateIn = popup.querySelector("[name=date-in]");
   var dateOut = popup.querySelector("[name=date-out]");
+  var numberOfAdults = popup.querySelector("[name=numb-of-adults]");
+  var numberOfChildren = popup.querySelector("[name=numb-of-children]");
   var form = popup.querySelector("form");
 
   link.addEventListener("click", function (evt) {
@@ -16,5 +18,8 @@
       popup.classList.remove("form-error");
       popup.offsetWidth = popup.offsetWidth;
       popup.classList.add("form-error");
-    } else evt.Default();
+    } else {
+      localStorage.setItem("numberOfAdults", numberOfAdults.value);
+      localStorage.setItem("numberOfChildren", numberOfChildren.value);
+    }
   });
