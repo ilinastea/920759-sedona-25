@@ -1,31 +1,6 @@
-/*temporary outlines*/
-/* .sedona-navigation, .welcome__white-block, .welcome__mask, .welcome__text,
-.welcome__title, .welcome__intro, .choice-reason__content, .trip-advice,
-.hotel-search-form,
-.hashtag-visitsedona, .link-htmlacademy, .filter-list__item,
-.hotel-filters, .filter__item, .filter-price-btn, .hotel-sorting,
-.hotel-item__action, .hotel-item__info, .hotel-item__rating,
-.social-links__item {
-  outline: 1px solid blue;
-}
-
-.hotel-search-form__number label, .hotel-search-form__number input,
-.hotel-search-form__date-in label, .hotel-search-form__date-in input,
-.hotel-search-form__date-out label, .hotel-search-form__date-out input,
-.hotel-search-form button,
-.hotel-item__name, .hotel-item__info,
-.filter,
-.filter-list__item label, .hotel-sorting__arrows,
-.hotel-item_details, .hotel-item_book,
-.link-htmlacademy p, .link-htmlacademy a, .link-htmlacademy svg {
-  outline: 1px dashed red;
-} */
-/*temporary outlines*/
-
 body {
   margin: 0;
   padding: 0;
-
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size: 14px;
   line-height: 26px;
@@ -47,42 +22,6 @@ a {
   width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
-}
-
-/* .welcome__background img, .welcome__text img,
-.choice-reason__photo img, .trip-advice__icon img,
-.hotel-item__photo img, .map__picture img,
-.link-htmlacademy img  */
-
-img {
-  display: block;
-}
-
-/*lists*/
-/* .main-menu, .social-links, .filter-list,
-.hotel-sorting__types, .hotel-item__rating-stars,
-.hotel-sorting__sorting */
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* .hotel-search-form input, .hotel-search-form fieldset,
-.hotel-search-form button, .hotel-filters fieldset,
-.hotel-filters input  */
-
-input, button, fieldset {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: none;
-}
-
-h1, h2, h3, h4, p {
-  margin: 0;
-  padding: 0;
 }
 
 /*_____Menu_____*/
@@ -503,11 +442,11 @@ h1, h2, h3, h4, p {
   cursor: pointer;
 }
 
-.filter-list__item input {
+.filter-list__item_checkbox {
   display: none;
 }
 
-.filter-list__item input[type="checkbox"]:checked + label::before {
+.filter-list__item_checkbox:checked + label::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -517,7 +456,7 @@ h1, h2, h3, h4, p {
   background: url("../img/checkbox-on.svg") no-repeat;
 }
 
-.filter-list__item input[type="checkbox"] + label::before {
+.filter-list__item_checkbox + label::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -527,7 +466,7 @@ h1, h2, h3, h4, p {
   background: url(../img/checkbox-off.svg) no-repeat;
 }
 
-.filter-list__item input:disabled + label::before {
+.filter-list__item_checkbox:disabled + label::before {
   opacity: 0.6;
 }
 

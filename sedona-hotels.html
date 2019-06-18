@@ -5,7 +5,7 @@
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style_min.css" rel="stylesheet">
   </head>
   <body>
     <header class="sedona-header main-layout">
@@ -31,15 +31,15 @@
           <legend class="filter__name">Инфраструктура:</legend>
           <ul class="filter-list">
             <li class="filter-list__item">
-              <input type="checkbox" name="pool" id="filter-pool" checked>
+              <input class="filter-list__item_checkbox" type="checkbox" name="pool" id="filter-pool" checked>
               <label for="filter-pool">Бассейн</label>
             </li>
             <li class="filter-list__item">
-              <input type="checkbox" name="parking" id="filter-parking">
+              <input class="filter-list__item_checkbox" type="checkbox" name="parking" id="filter-parking">
               <label for="filter-parking">Парковка</label>
             </li>
             <li class="filter-list__item">
-              <input type="checkbox" name="wifi" id="filter-wifi" disabled>
+              <input class="filter-list__item_checkbox" type="checkbox" name="wifi" id="filter-wifi" disabled>
               <label for="filter-wifi">Wi-Fi</label>
             </li>
           </ul>
@@ -48,15 +48,15 @@
           <legend class="filter__name">Тип жилья:</legend>
           <ul class="filter-list">
             <li class="filter-list__item">
-              <input type="checkbox" name="hotel" id="filter-hotel" checked>
+              <input class="filter-list__item_checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
               <label for="filter-hotel">Гостиница</label>
             </li>
             <li class="filter-list__item">
-              <input type="checkbox" name="motel" id="filter-motel" checked>
+              <input class="filter-list__item_checkbox" type="checkbox" name="motel" id="filter-motel" checked>
               <label for="filter-motel">Мотель</label>
             </li>
             <li class="filter-list__item">
-              <input type="checkbox" name="apartments" id="filter-aparts" checked disabled>
+              <input class="filter-list__item_checkbox" type="checkbox" name="apartments" id="filter-aparts" checked disabled>
               <label for="filter-aparts">Апартаменты</label>
             </li>
           </ul>
