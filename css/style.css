@@ -220,7 +220,7 @@ a {
   flex-direction: column;
   width: 458px;
   margin-left: -284px;
-  padding: 54px 55px;
+  padding: 55px;
   font: inherit;
   background-color: #ffffff;
 }
@@ -230,38 +230,15 @@ a {
   font-weight: 700;
 }
 
-.hotel-search-form__date-in,
-.hotel-search-form__date-out {
+.hotel-search-form__trip-dates {
   position: relative;
   display: flex;
   margin-bottom: 30px;
   align-items: center;
 }
 
-.hotel-search-form__calendar  {
-  position: relative;
-  display: flex;
-  margin-left: auto;
-  align-items: center;
-}
-
-.hotel-search-form__calendar svg {
-  position: absolute;
-  right: 8px;
-  opacity: 0.5;
-}
-
-.hotel-search-form__calendar svg:hover {
-  opacity: 1;
-}
-
-.hotel-search-form__calendar svg:active path {
-  fill: #81b3d2;
-}
-
-.hotel-search-form__date-in input,
-.hotel-search-form__date-out input {
-  width: 334px;
+.hotel-search-form__date-input {
+  width: 305px; /*334*/
   padding: 6px 0 6px 12px;
   font: inherit;
   font-weight: 700;
@@ -272,6 +249,62 @@ a {
 /* for IE*/
 .hotel-search-form input::-ms-clear {
   display: none;
+}
+
+.hotel-search-form__date  {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.hotel-search-form__calendar {
+  padding: 8px 0;
+  background-color: #f2f2f2;
+}
+
+.calendar-button {
+  position: relative;
+  display: block;
+  width: 29px;
+  height: 22px;
+  background-color: transparent;
+}
+
+.calendar-svg {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  opacity: 0.5;
+}
+
+.calendar-svg:hover {
+  opacity: 1;
+}
+
+.calendar-svg:active path {
+  fill: #81b3d2;
+}
+
+.hotel-search-form__date:hover:not(.label) {
+  background-color: #ebebeb;
+}
+
+.hotel-search-form__date-input:hover {
+  background-color: #ebebeb;
+}
+
+.hotel-search-form__date-input:hover + .hotel-search-form__calendar {
+  background-color: #ebebeb;
+}
+
+.hotel-search-form__date-input:focus {
+  box-shadow: inset 0 -2px #e5e5e5, inset 2px 2px #e5e5e5;
+  background-color: #ffffff;
+}
+
+.hotel-search-form__date-input:focus + .hotel-search-form__calendar {
+  background-color: #ffffff;
+  box-shadow: inset -2px -2px #e5e5e5, inset 0 2px #e5e5e5;
 }
 
 .hotel-search-form__number {
@@ -349,17 +382,6 @@ a {
   color: #ffffff;
   background-color: #81b3d2;
   cursor: pointer;
-}
-
-.hotel-search-form__date-in input:hover,
-.hotel-search-form__date-out input:hover {
-  background-color: #ebebeb;
-}
-
-.hotel-search-form__date-in input:focus:not(.label),
-.hotel-search-form__date-out input:focus:not(.label) {
-  outline: 2px solid #e5e5e5;
-  background-color: #ffffff;
 }
 
 .hotel-search {
